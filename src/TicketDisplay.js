@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom'; // Thêm import Link
 import bwipjs from 'bwip-js';
 import { TOTP } from 'otpauth';
 import './TicketDisplay.css';
 
 function TicketDisplay({ events }) {
-  const { eventId, seatId } = useParams(); // Lấy eventId và seatId từ URL
+  const { eventId, seatId } = useParams();
   const [barcodeSrc, setBarcodeSrc] = useState('');
   const [error, setError] = useState('');
   const [currentTicketIndex, setCurrentTicketIndex] = useState(0);
@@ -15,7 +15,6 @@ function TicketDisplay({ events }) {
   const event = events && Array.isArray(events) ? events.find((e) => e.eventId === eventId) : null;
   const tickets = event ? event.tickets : [];
 
-  // Nếu có seatId, tìm index của vé tương ứng
   useEffect(() => {
     if (seatId && tickets.length > 0) {
       const index = tickets.findIndex((ticket) => ticket.seatId === seatId);
