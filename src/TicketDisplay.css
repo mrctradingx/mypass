@@ -16,6 +16,18 @@
   background: rgb(31, 116, 245);
 }
 
+.event-date {
+  margin: 5px 0;
+  color: #ffffff;
+  background: rgb(31, 116, 245); /* Giữ nguyên màu nền xanh */
+}
+
+.event-location {
+  margin: 5px 0;
+  color: #ffffff;
+  background: rgb(31, 116, 245); /* Giữ nguyên màu nền xanh */
+}
+
 .ticket-card {
   background: white;
   border-radius: 10px;
@@ -82,7 +94,6 @@
   max-width: 320px; /* Đảm bảo không vượt quá 80% của 400px (max-width của .ticket-container) */
   margin-left: auto;
   margin-right: auto;
-}
 }
 
 .barcode-container img {
