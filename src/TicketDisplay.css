@@ -10,7 +10,8 @@
 
 .event-info p {
   margin: 5px 0;
-  color: #333;
+  color: #ffffff;
+  background: rgb(31, 116, 245);
 }
 
 .ticket-card {
