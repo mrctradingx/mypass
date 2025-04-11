@@ -1,13 +1,13 @@
 .ticket-display {
   text-align: center;
   margin: 20px;
-  color: #ffffff;
-  background: rgb(31, 116, 245);
 }
 
 .event-info h2 {
   margin: 0;
   font-size: 24px;
+  color: #ffffff;
+  background: rgb(31, 116, 245);
 }
 
 .event-info p {
