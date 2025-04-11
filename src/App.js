@@ -173,8 +173,7 @@ function App() {
     setEditNote('');
   };
 
-  const isPublicRoute = location.pathname.match(/^\/[a-z]+-[a-z0-9]+(\/seat[0-9]+)?$/);
-
+  const isPublicRoute = location.pathname.match(/^\/[\p{L}\p{N}\-]+(\/seat[0-9]+)?$/u);
   if (isLoading) {
     return <div>Loading...</div>;
   }
