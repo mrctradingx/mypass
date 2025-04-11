@@ -33,7 +33,6 @@ function App() {
     localStorage.setItem('ticketEvents', JSON.stringify(events));
   }, [events]);
 
-  // Xử lý lỗi từ Auth0
   useEffect(() => {
     if (error) {
       setAppError(`Auth0 Error: ${error.message}`);
@@ -119,7 +118,7 @@ function App() {
     }
 
     setEvents([...events, { eventId, tickets, note: formData.note || '' }]);
-    navigate(`/${eventId}`);
+    // Không chuyển hướng tự động, hiển thị link công khai để người dùng sao chép
   };
 
   const startEditing = (event) => {
@@ -161,17 +160,14 @@ function App() {
     setEditNote('');
   };
 
-  // Nếu Auth0 đang tải, hiển thị loading
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  // Nếu có lỗi từ Auth0, hiển thị lỗi
   if (appError) {
     return <div className="error">{appError}</div>;
   }
 
-  // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập của Auth0
   if (!isAuthenticated) {
     loginWithRedirect();
     return null;
@@ -281,9 +277,14 @@ function App() {
           <h2>Generated Events</h2>
           {events.map((event) => (
             <div key={event.eventId} className="event-item">
-              <Link to={`/${event.eventId}`}>
-                Event: {event.tickets[0].eventName} ({event.tickets.length} tickets) {event.note ? `- ${event.note}` : ''}
-              </Link>
+              <div className="event-link">
+                <span>Event: {event.tickets[0].eventName} ({event.tickets.length} tickets) {event.note ? `- ${event.note}` : ''}</span>
+                <p>
+                  Public Link: <a href={`https://mypassdelivery.com/${event.eventId}`} target="_blank" rel="noopener noreferrer">
+                    https://mypassdelivery.com/{event.eventId}
+                  </a>
+                </p>
+              </div>
               <button onClick={() => startEditing(event)} className="edit-button">
                 Edit Tokens
               </button>

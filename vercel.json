@@ -1,0 +1,15 @@
+{
+  "routes": [
+    {
+      "src": "/([a-z]+-[a-z0-9]+)",
+      "status": 301,
+      "headers": { "Location": "https://mypassdelivery.com/$1" }
+    },
+    {
+      "src": "/([a-z]+-[a-z0-9]+)/seat[0-9]+",
+      "status": 301,
+      "headers": { "Location": "https://mypassdelivery.com/$1/$2" }
+    },
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
