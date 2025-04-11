@@ -1,5 +1,7 @@
 {
   "routes": [
+    { "src": "/static/(.*)", "dest": "/static/$1" }, // Phục vụ các file tĩnh
+    { "src": "/manifest.json", "dest": "/manifest.json" }, // Phục vụ manifest.json
     {
       "src": "/([a-z]+-[a-z0-9]+)",
       "status": 301,
