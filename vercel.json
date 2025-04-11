@@ -1,17 +1,8 @@
 {
   "routes": [
-    { "src": "/static/(.*)", "dest": "/static/$1" }, // Phục vụ các file tĩnh
+    { "src": "/static/(.*)", "dest": "/static/$1" }, // Phục vụ các file tĩnh (JS, CSS, v.v.)
     { "src": "/manifest.json", "dest": "/manifest.json" }, // Phục vụ manifest.json
-    {
-      "src": "/([a-z]+-[a-z0-9]+)",
-      "status": 301,
-      "headers": { "Location": "https://mypassdelivery.com/$1" }
-    },
-    {
-      "src": "/([a-z]+-[a-z0-9]+)/seat[0-9]+",
-      "status": 301,
-      "headers": { "Location": "https://mypassdelivery.com/$1/$2" }
-    },
-    { "src": "/(.*)", "dest": "/" }
+    { "src": "/favicon.ico", "dest": "/favicon.ico" }, // Phục vụ favicon.ico
+    { "src": "/(.*)", "dest": "/index.html" } // Hỗ trợ SPA: tất cả route trả về index.html
   ]
 }
