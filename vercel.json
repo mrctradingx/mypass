@@ -1,9 +1,10 @@
 {
   "routes": [
-    { "src": "/static/(.*)", "dest": "/static/$1" }, // Phục vụ các file tĩnh (JS, CSS, v.v.)
-    { "src": "/manifest.json", "dest": "/manifest.json" }, // Phục vụ manifest.json
-    { "src": "/favicon.ico", "dest": "/favicon.ico" }, // Phục vụ favicon.ico
-    { "src": "/service-worker.js", "dest": "/service-worker.js" }, // Phục vụ service worker (nếu có)
-    { "src": "/(.*)", "dest": "/index.html" } // Hỗ trợ SPA: tất cả route trả về index.html
+    { "src": "/static/(.*)", "dest": "/static/$1" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/service-worker.js", "dest": "/service-worker.js" },
+    { "src": "/asset-manifest.json", "dest": "/asset-manifest.json" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
