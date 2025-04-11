@@ -1,204 +1,166 @@
-.App {
+.ticket-display {
   text-align: center;
-  margin: 20px;
+  padding: 20px;
+  background: #fff; /* Màu nền trắng cho toàn bộ trang */
 }
 
-.header {
+.event-info {
+  background: #003087; /* Màu nền xanh đậm */
+  padding: 10px;
+  border-radius: 5px 5px 0 0; /* Bo góc trên */
+}
+
+.event-info h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #fff; /* Màu chữ trắng */
+}
+
+.event-info p {
+  font-size: 16px;
+  color: #fff; /* Màu chữ trắng */
+  margin-bottom: 0;
+}
+
+.ticket-card {
+  background: #003087; /* Màu nền xanh đậm */
+  border-radius: 0 0 10px 10px; /* Bo góc dưới */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.ticket-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.logout-button {
-  padding: 8px 16px;
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.ticket-header span {
+  font-size: 14px;
+  color: #fff; /* Màu chữ trắng */
+}
+
+.info-icon {
+  font-size: 16px;
+  color: #fff; /* Màu chữ trắng */
   cursor: pointer;
-}
-
-.logout-button:hover {
-  background-color: #c82333;
-}
-
-.form {
-  margin-bottom: 20px;
-}
-
-.form h3 {
-  margin: 10px 0;
-}
-
-.form input {
-  margin: 5px;
-  padding: 8px;
-  width: 300px;
-}
-
-.form button {
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.form button:hover {
-  background-color: #45a049;
-}
-
-.key-input {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.key-input h4 {
-  margin: 5px 0;
-}
-
-.event-list {
-  margin-top: 20px;
-}
-
-.event-list div {
-  margin: 10px 0;
-}
-
-.event-item {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
-.event-link {
-  flex: 1;
-  text-align: left;
-}
-
-.event-link p {
-  margin: 5px 0;
-  font-size: 14px;
-}
-
-.event-link a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.event-link a:hover {
-  text-decoration: underline;
-}
-
-.edit-button {
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.edit-button:hover {
-  background-color: #0056b3;
-}
-
-.edit-tokens {
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.token-input {
-  margin: 5px 0;
-}
-
-.token-input label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.token-input input {
-  padding: 5px;
-  width: 300px;
-}
-
-.save-button {
-  padding: 5px 10px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 5px;
-}
-
-.save-button:hover {
-  background-color: #218838;
-}
-
-.cancel-button {
-  padding: 5px 10px;
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.cancel-button:hover {
-  background-color: #c82333;
-}
-
-.error {
-  color: red;
-  margin: 10px 0;
-}
-
-/* Style cho trang đăng nhập */
-.login-page {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.login-page h1 {
+.ticket-details {
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 
-.form-group {
-  margin-bottom: 15px;
+.ticket-details div {
+  text-align: center;
 }
 
-.form-group label {
+.ticket-details span {
   display: block;
-  margin-bottom: 5px;
+  font-size: 14px;
+  color: #fff; /* Màu chữ trắng */
 }
 
-.form-group input {
+.ticket-details h3 {
+  font-size: 24px;
+  margin: 5px 0;
+  color: #fff; /* Màu chữ trắng */
+}
+
+.admission {
+  font-size: 14px;
+  color: #fff; /* Màu chữ trắng */
+  margin-bottom: 20px;
+}
+
+.barcode-container {
+  position: relative;
+  margin-bottom: 20px;
+  background: rgba(0, 255, 0, 0.2); /* Lớp màu xanh nhạt phủ lên barcode */
+  padding: 5px;
+}
+
+.barcode-container img {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  height: auto;
 }
 
-.login-page button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+.scan-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: #00ff00; /* Thanh màu xanh đậm */
+  animation: scan 2s infinite linear;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1000%); /* Quét từ trái sang phải */
+  }
+}
+
+.warning {
+  font-size: 14px;
+  color: #ccc; /* Màu chữ xám nhạt */
+  margin-bottom: 20px;
+}
+
+.ticket-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ticket-navigation button {
+  background: none;
   border: none;
-  border-radius: 5px;
+  font-size: 24px;
   cursor: pointer;
+  color: #666;
 }
 
-.login-page button:hover {
-  background-color: #0056b3;
+.ticket-navigation button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.ticket-links {
+  margin-top: 20px;
+}
+
+.ticket-links h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.ticket-links a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.ticket-links a.active {
+  font-weight: bold;
+  color: #0056b3;
 }
