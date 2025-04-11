@@ -1,55 +1,75 @@
 .ticket-display {
   text-align: center;
-  margin: 20px;
+  padding: 20px;
+  background: #fff; /* Màu nền trắng cho toàn bộ trang */
+}
+
+.ticket-container {
+  background: #006cdb; /* Màu nền xanh sáng cho toàn bộ khối vé */
+  border-radius: 10px; /* Bo góc cho toàn bộ khối */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.event-info {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Đường viền nhẹ giữa tiêu đề và thông tin vé */
+}
+
+.event-text {
+  background: #007bff; /* Màu xanh sáng hơn cho khu vực có text */
+  padding: 5px 10px; /* Padding để tạo khoảng cách */
+  border-radius: 5px; /* Bo góc nhẹ */
+  display: inline-block; /* Chỉ chiếm không gian của text */
 }
 
 .event-info h2 {
-  margin: 0;
   font-size: 24px;
+  margin-bottom: 5px;
+  color: #fff; /* Màu chữ trắng */
 }
 
 .event-info p {
-  margin: 5px 0;
-  color: #333;
+  font-size: 16px;
+  color: #fff; /* Màu chữ trắng */
+  margin-bottom: 0;
 }
 
 .ticket-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  width: 90%;
-  max-width: 400px;
-  overflow: hidden;
+  padding: 20px;
 }
 
 .ticket-header {
-  background: #003087;
-  color: white;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.ticket-header span {
+  font-size: 14px;
+  color: #fff; /* Màu chữ trắng */
 }
 
 .info-icon {
-  background: white;
-  color: #003087;
+  font-size: 16px;
+  color: #fff; /* Màu chữ trắng */
+  cursor: pointer;
+  background: none;
+  border: 1px solid #fff;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
 }
 
 .ticket-details {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
-  background: #003087;
-  color: white;
+  margin-bottom: 20px;
 }
 
 .ticket-details div {
@@ -59,22 +79,26 @@
 .ticket-details span {
   display: block;
   font-size: 14px;
+  color: #fff; /* Màu chữ trắng */
 }
 
 .ticket-details h3 {
-  margin: 5px 0;
   font-size: 24px;
+  margin: 5px 0;
+  color: #fff; /* Màu chữ trắng */
 }
 
 .admission {
-  padding: 10px;
   font-size: 14px;
-  color: #333;
+  color: #fff; /* Màu chữ trắng */
+  margin-bottom: 20px;
 }
 
 .barcode-container {
   position: relative;
-  padding: 10px;
+  margin-bottom: 20px;
+  background: rgba(0, 255, 0, 0.2); /* Lớp màu xanh nhạt phủ lên barcode */
+  padding: 5px;
 }
 
 .barcode-container img {
@@ -84,90 +108,69 @@
 
 .scan-effect {
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 0;
-  width: 100%;
+  width: 20px;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(255, 255, 255, 0.5) 50%,
-    transparent 100%
-  );
+  background: #00ff00; /* Thanh màu xanh đậm */
   animation: scan 2s infinite linear;
 }
 
 @keyframes scan {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(1000%); /* Quét từ trái sang phải */
   }
 }
 
 .warning {
-  padding: 10px;
-  font-size: 12px;
-  color: #666;
+  font-size: 14px;
+  color: #ccc; /* Màu chữ xám nhạt */
+  margin-bottom: 20px;
 }
 
 .ticket-navigation {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .ticket-navigation button {
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: 24px;
   cursor: pointer;
-  padding: 0 10px;
+  color: #666;
 }
 
 .ticket-navigation button:disabled {
-  opacity: 0.3;
+  color: #ccc;
   cursor: not-allowed;
-}
-
-.ticket-navigation span {
-  margin: 0 10px;
-  font-size: 14px;
-  color: #666;
 }
 
 .ticket-links {
   margin-top: 20px;
-  padding: 10px;
+  padding: 0 20px; /* Thêm padding để căn chỉnh */
 }
 
 .ticket-links h3 {
-  margin-bottom: 10px;
   font-size: 16px;
-}
-
-.ticket-links div {
-  margin: 5px 0;
+  margin-bottom: 10px;
+  color: #fff; /* Màu chữ trắng */
 }
 
 .ticket-links a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.ticket-links a:hover {
-  text-decoration: underline;
+  display: block;
+  color: #fff; /* Màu chữ trắng */
+  text-decoration: underline; /* Thêm gạch chân để dễ nhìn */
+  margin: 5px 0;
 }
 
 .ticket-links a.active {
   font-weight: bold;
-  color: #003087;
-}
-
-.error {
-  color: red;
-  margin: 10px 0;
-  font-size: 14px;
+  color: #ccc; /* Màu xám nhạt cho liên kết đang hoạt động */
 }
