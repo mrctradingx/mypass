@@ -48,8 +48,8 @@ function TicketDisplay({ events }) {
       bwipjs.toCanvas(canvasRef.current, {
         bcid: 'pdf417',
         text: barcodeData,
-        scale: 3,
-        height: 10,
+        scale: 5,
+        height: 8,
       });
       const dataUrl = canvasRef.current.toDataURL('image/png');
       setBarcodeSrc(dataUrl);

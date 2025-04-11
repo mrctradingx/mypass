@@ -78,11 +78,17 @@
 .barcode-container {
   position: relative;
   padding: 10px;
+  width: 80%; /* Thu hẹp chiều rộng xuống 80% so với container cha */
+  max-width: 320px; /* Đảm bảo không vượt quá 80% của 400px (max-width của .ticket-container) */
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 
 .barcode-container img {
   width: 100%;
-  height: auto;
+  height: 80px;
+  object-fit: contain; /* Đảm bảo hình ảnh không bị méo */
 }
 
 .scan-effect {
