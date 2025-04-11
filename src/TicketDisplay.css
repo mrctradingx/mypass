@@ -14,14 +14,15 @@
 
 .event-info {
   padding: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Đường viền nhẹ giữa tiêu đề và thông tin vé */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: #006cdb; /* Màu nền xanh sáng */
 }
 
 .event-text {
   background: #007bff; /* Màu xanh sáng hơn cho khu vực có text */
-  padding: 5px 10px; /* Padding để tạo khoảng cách */
-  border-radius: 5px; /* Bo góc nhẹ */
-  display: inline-block; /* Chỉ chiếm không gian của text */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block; /* Chiếm toàn bộ chiều rộng */
 }
 
 .event-info h2 {
